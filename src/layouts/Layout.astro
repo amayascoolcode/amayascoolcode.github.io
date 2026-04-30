@@ -6,6 +6,7 @@ import Main from './elements/Main.astro';
 import Footer from './elements/Footer.astro';
 import sprite from '../assets/img/sprites/index.png';
 import favicon from '/favicon.ico';
+import decor from '../assets/img/black6.gif';
 
 import { KnownAgents } from "@knownagents/sdk"
 const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
@@ -40,7 +41,9 @@ const { title, description } = Astro.props;
 		<div class="flex">
 			<Aside/>
 			<Main>
-				<h2>{title}</h2>
+				<div class="flex gap-3 items-center justify-center">
+					<img src={decor.src} alt=""> <h2>{title}</h2> <img src={decor.src} alt="">
+				</div>
 				<slot />
     			<!-- <img src={sprite.src} alt="" class="absolute -bottom-20 -right-10 w-60 md:w-80"> -->
 			</Main>
