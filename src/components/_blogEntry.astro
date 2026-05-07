@@ -2,17 +2,11 @@
 import Layout from "../layouts/Layout.astro";
 const { frontmatter } = Astro.props;
 ---
-<Layout title={frontmatter.blogDate} description={frontmatter.blogTitle}>
+<Layout title={frontmatter.blogTitle} description={frontmatter.blogDate}>
 	<div class="border-fg p-5 my-7">
-		<div class="flex items-center justify-between mb-5">
-    		<h3>{frontmatter.blogTitle}</h3>
-    		<small>{frontmatter.blogDate}</small>
-  		</div>
-  		<div>
-			<p><slot /></p>
-  		</div>
-		<div class="text-center my-6">
-			<a href="/blog/">return</a>
-		</div>
+		<p><slot /></p>
+	</div>
+	<div class="text-center my-6">
+		<a href="/blog/">return</a>
 	</div>
 </Layout>

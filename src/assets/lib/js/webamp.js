@@ -1,26 +1,30 @@
-  import Webamp from "https://unpkg.com/webamp@^2/butterchurn";
-    const webamp = new Webamp({
 
-        initialTracks: [
-          {
-            metaData: {
-              artist: "DJ Mike Llama",
-              title: "Llama Whippin' Intro",
-            },
-            // NOTE: Your audio file must be served from the same domain as your HTML
-            // file, or served with permissive CORS HTTP headers:
-            // https://docs.webamp.org/docs/guides/cors
-            url: "https://cdn.jsdelivr.net/gh/captbaritone/webamp@43434d82cfe0e37286dbbe0666072dc3190a83bc/mp3/llama-2.91.mp3",
-            duration: 5.322286,
-          },
-          {
-            metaData: {
-              artist: "Some Artist",
-              title: "Title of Second Track",
-            },
-            url: "https://cdn.jsdelivr.net/gh/captbaritone/webamp@43434d82cfe0e37286dbbe0666072dc3190a83bc/mp3/llama-2.91.mp3",
-            duration: 5.322286,
-          },
-        ],
-    });
-  webamp.renderWhenReady(document.getElementById("webamp"));
+// NOTE: Your audio file must be served from the same domain as your HTML
+// file, or served with permissive CORS HTTP headers:
+// https://docs.webamp.org/docs/guides/cors
+
+
+function show() {
+            /* Access image by id and change 
+            the display property to block*/
+            document.getElementById('webamp')
+                .style.display = "block";
+            document.getElementById('sprite')
+                .style.display = "none";
+}
+
+
+import Webamp from "https://unpkg.com/webamp@^2/butterchurn";
+
+const webamp = new Webamp({
+  initialTracks: [
+    {
+      metaData: { artist: "madmadmaya", title: "quickie", },
+      url: "/src/assets/lib/audio/quickie.wav",
+    },
+        
+  ],
+  initialSkin: { url: "/src/assets/lib/makemesad.wsz"},
+});
+
+webamp.renderWhenReady(document.getElementById("webamp"));
