@@ -15,6 +15,10 @@
     --color-accent: #c69bad;
     --color-dim: #584663;
 }
+::selection {
+    background: var(--color-dim);
+    color: var(--color-fg);
+}
 
 /* Elements */
 html {

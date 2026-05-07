@@ -1,21 +1,26 @@
 ---
+// Files
 import '/src/global.css';
+import { KnownAgents } from "@knownagents/sdk"
+
+// Images
+import favicon from '/favicon.ico';
+import decor from '../assets/img/black6.gif';
+import sprite from '../assets/img/sprites/bussy.png';
+
+// layout
 import Header from './elements/Header.astro';
 import Aside from './elements/Aside.astro';
 import Main from './elements/Main.astro';
 import Footer from './elements/Footer.astro';
-import sprite from '../assets/img/sprites/index.png';
-import favicon from '/favicon.ico';
-import decor from '../assets/img/black6.gif';
 
-import { KnownAgents } from "@knownagents/sdk"
-const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
-
+// Interface
 interface Props {
   	title: string;
   	description: string;
 }
 const { title, description } = Astro.props;
+const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
@@ -33,6 +38,9 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href={favicon}/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<link rel="alternate" href="/src/feed.xml" type="application/rss+xml" title="RSS">
+		<!-- Scripts -->
+		<script src="../assets/lib/js/no_click.js"></script>
+		<!-- <script src="../assets/lib/js/webamp.js"></script> -->
 		<!-- Title -->
 		<title>MD ꩜⋆˚｡ {title}</title>
 	</head>
@@ -41,20 +49,14 @@ const { title, description } = Astro.props;
 		<div class="flex">
 			<Aside/>
 			<Main>
-				<div class="flex gap-3 items-center justify-center">
-					<img src={decor.src} alt=""> <h2>{title}</h2> <img src={decor.src} alt="">
-				</div>
-				<slot />
-    			<!-- <img src={sprite.src} alt="" class="absolute -bottom-20 -right-10 w-60 md:w-80"> -->
+				<h2>{title}</h2>
+				<img src={decor.src} alt="" class="m-auto">
+				<slot/>
 			</Main>
 		</div>
 		<Footer/>
+		<img src={sprite.src} alt="" class="fixed -bottom-6 -right-10 w-70">
+		<div id="webamp"></div>
 	</body>
-	<script>
-		document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
-	</script>
-	<script>NekoType="black"</script>
-<h1 id=nl><script src="https://webneko.net/n20171213.js"></script><a 
-href="https://webneko.net"></a></h1>
 </html>
 
