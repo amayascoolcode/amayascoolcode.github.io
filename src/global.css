@@ -11,8 +11,8 @@
 @theme {
     --font-display: display;
     --color-bg: #000;
-    --color-fg: #dcd8d2;
-    --color-accent: #c69bad;
+    --color-fg: #fae9f1;
+    --color-accent: #eeb7f1;
     --color-dim: #584663;
 }
 ::selection {
