@@ -1,0 +1,25 @@
+---
+import Layout from "../../../layouts/Layout.astro";
+import { Image } from 'astro:assets';
+---
+<Layout title="GF Lock" description="My gf lock.">
+	<section>		
+		<div class="my-4 text-center">
+			<p>Enter password to unlock:</p>
+			<input class="m-5 border-b" type="password" id="pwd">
+			<br> <button class="m-5" onclick="check()">Submit</button>
+			<p id="error"></p>
+		</div>
+		<script is:inline>
+			function check() {
+				var pwd = document.getElementById('pwd').value;
+				if (pwd == 'lol') {
+					window.location.href = '/shrines/gf/';
+				} else {
+					document.getElementById('error').innerHTML = 'Wrong password';
+				}
+			}
+		</script>
+	</section>
+</Layout>
+
