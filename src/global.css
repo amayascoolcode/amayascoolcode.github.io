@@ -25,13 +25,13 @@ html {
     @apply scroll-smooth;
 }
 body {
-    @apply text-base font-sans bg-bg text-fg font-sans max-w-1000;
-}
-section {
-    @apply py-4;
+    @apply text-base font-sans bg-bg text-fg font-sans max-w-1000 m-auto;
 }
 main {
     @apply relative;
+}
+section {
+    @apply py-4;
 }
 h1 {
     @apply text-7xl mb-6 font-display tracking-widest;
@@ -43,7 +43,7 @@ h3 {
     @apply text-2xl mb-4 text-accent;
 }
 p {
-    @apply mb-4;
+    @apply mb-2;
 }
 a {
     @apply text-accent;
