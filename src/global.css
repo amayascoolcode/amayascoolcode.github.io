@@ -19,6 +19,11 @@
     background: var(--color-dim);
     color: var(--color-fg);
 }
+/* Pink Paw Print - https://www.cursors-4u.com/cursor/pink-paw-print */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/pink-paw-print-820c6758-32.webp') 32 32, auto !important;
+}
+/* End www.Cursors-4U.com Code */
 
 /* Elements */
 html {

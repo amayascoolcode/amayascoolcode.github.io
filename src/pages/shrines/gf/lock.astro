@@ -1,9 +1,11 @@
 ---
 import Layout from "../../../layouts/Layout.astro";
 import { Image } from 'astro:assets';
+import welcome from '/src/assets/img/collection/extra/textpassword.gif';
 ---
 <Layout title="GF Lock" description="My gf lock.">
-	<section>		
+	<section>
+		<img src={welcome.src} alt="" class="m-auto">		
 		<div class="my-4">
 			<p>Enter password to unlock:</p>
 			<input class="m-5 border-b" type="password" id="pwd">

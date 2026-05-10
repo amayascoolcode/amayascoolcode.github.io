@@ -2,10 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { Image } from "astro:assets";
 
-const d = import.meta.glob<{ default: ImageMetadata }>("../assets/img/drawings/*", { 
-  eager: true 
-});
-const drawings = Object.values(d).map(module => module.default);
+const drawings_folder = import.meta.glob<{ default: ImageMetadata }>("../assets/img/art/drawings/*", { eager: true });
+const drawings = Object.values(drawings_folder).map(module => module.default);
 ---
 <Layout title="Art" description="My drawings and paintings.">
     <section class="grid grid-cols-2 md:grid-cols-4">

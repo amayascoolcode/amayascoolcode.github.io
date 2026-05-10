@@ -1,9 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Button from '../assets/img/button.gif';
 ---
-<Layout title="News" description="Welcome to the dungeon.">
+<Layout title="News" description="Updates from the dungeon.">
+	<a href="https://www.imood.com/users/madmadmaya"><img src="https://moods.imood.com/display/uname-madmadmaya/fg-dcd8d2/trans-1/imood.gif" alt="The current mood of madmadmaya at www.imood.com" class="m-auto"></a>
 	<section>
-		<p class="text-dim">(nothing yet...)</p>
+		<!-- <div id="statuscafe" class="text-dim text-sm">
+			<div id="statuscafe-username"></div>
+			<div id="statuscafe-content"></div>
+			<script src="https://status.cafe/current-status.js?name=madmadmaya" defer></script>
+		</div> -->
+		<section class="text-left">
+			<h3>Update Log</h3>
+			<ul class="list-disc">
+				<li><strong>5/10/26:</strong> Fixed all links, restructured layout, added news and link page.</li>
+			</ul>
+		</section>
 	</section>
 </Layout>

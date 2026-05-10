@@ -1,13 +1,15 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
-import Button from '../assets/img/button.gif';
+import button from '../assets/img/button.gif';
+import welcome from '/src/assets/img/collection/extra/welcome5.gif';
 ---
 <Layout title="Home" description="Welcome to the dungeon.">
 	<section class="text-center">
-		<Image src={Button} alt="Website button" class="m-auto" />
+		<Image src={welcome} alt="Website button" class="m-auto" />
 		<p>Welcome to the dungeon ★ my dark corner on the web. ⋆˙꩜ <br> 18+, no repost/reuse; <a href="https://guestbook.mmdungeon.xyz" target="_blank" rel="noopener noreferrer">Leave a message! <3</a></p>
 		<script type="text/javascript" src="//counter1.fc2.com/counter.php?id=40502263&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40502263&main=1" /></noscript>
+		<Image src={button} alt="Website button" class="m-auto" />
 		<!-- <div><a href="https://commissions.mmdungeon.xyz" target="_blank" rel="noopener noreferrer"><img src="" alt="Interested in commissions? Check my Vgen"></a></div> -->
 		<!-- <div><a href="https://join.mmdungeon.xyz" target="_blank" rel="noopener noreferrer"><img src="" alt="Join the Patreon + Discord community"></a></div> -->
 	</section>
