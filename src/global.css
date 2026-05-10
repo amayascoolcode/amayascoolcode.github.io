@@ -22,16 +22,14 @@
 
 /* Elements */
 html {
-    @apply scroll-smooth;
+    @apply scroll-smooth px-5;
+    background-image: url("../src/assets/img/header.jpg");
 }
 body {
-    @apply text-base font-sans bg-bg text-fg font-sans max-w-1000 m-auto;
+    @apply text-base font-sans bg-bg text-fg text-center leading-6;
 }
-main {
-    @apply relative;
-}
-section {
-    @apply py-4;
+header, aside, nav, main, footer, section {
+    @apply p-3;
 }
 h1 {
     @apply text-7xl mb-6 font-display tracking-widest;
@@ -43,7 +41,7 @@ h3 {
     @apply text-2xl mb-4 text-accent;
 }
 p {
-    @apply mb-2;
+    @apply my-3;
 }
 a {
     @apply text-accent;

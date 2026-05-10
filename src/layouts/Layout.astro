@@ -1,23 +1,24 @@
 ---
 // Files
 import '/src/global.css';
-import { KnownAgents } from "@knownagents/sdk"
-
-// Images
 import favicon from '/favicon.ico';
-import sprite from '../assets/img/sprites/bussy.png';
+import { KnownAgents } from "@knownagents/sdk"
 
 // layout
 import Header from './elements/Header.astro';
+import Nav from './elements/Nav.astro';
 import Aside from './elements/Aside.astro';
 import Main from './elements/Main.astro';
 import Footer from './elements/Footer.astro';
+import Extra from './elements/Extras.astro';
 
 // Interface
 interface Props {
   	title: string;
   	description: string;
 }
+
+// Constants
 const { title, description } = Astro.props;
 const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
 
@@ -33,16 +34,16 @@ const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
 		<meta name="generator" content={Astro.generator} />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="keywords" content="Madmadmaya, mmdungeon" />
+		<!-- Scripts -->
+		<script src="../assets/lib/js/no_click.js"></script>
 		<!-- Links -->
 		<link rel="icon" type="image/svg+xml" href={favicon}/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 		<link rel="alternate" href="/src/feed.xml" type="application/rss+xml" title="RSS">
-		<!-- Scripts -->
-		<script src="../assets/lib/js/no_click.js"></script>
 		<!-- Title -->
 		<title>MD ★ {title}</title>
 	</head>
-	<body style="max-width:900px;">
+	<body class="m-auto h-full" style="max-width: 1000px;">
 		<Header/>
 		<div class="flex">
 			<Aside/>
@@ -52,11 +53,7 @@ const knownAgents = new KnownAgents("420e1fea-7931-4160-9fd6-bf87899f72fb");
 			</Main>
 		</div>
 		<Footer/>
-		<div class="fixed -bottom-6 -right-2 w-65">
-			<!-- <a href="https://merch.mmdungeon.xyz" target="_blank" rel="noopener noreferrer"> -->
-				<img src={sprite.src} alt="Merch link">
-			<!-- </a> -->
-		</div>
+		<Extra/>
 	</body>
 </html>
 
