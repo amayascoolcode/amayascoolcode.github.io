@@ -7,6 +7,6 @@ const photos = Object.values(photo_folder).map(module => module.default);
 ---
 <Layout title="Photos" description="My pics.">
     <section class="grid grid-cols-2 md:grid-cols-4">
-        {photos.map((p) => (<Image src={p} alt="drawing image" loading="lazy"/>))}
+        {photos.map((p) => (<Image src={p} alt="photo" loading="lazy"/>))}
     </section>
 </Layout>
