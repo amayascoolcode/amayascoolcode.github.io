@@ -20,7 +20,7 @@ const stamps = Object.values(stamp_folder).map(module => module.default);
         display: inline;
     }
 </style>
-<Layout title="Collection" description="My links, resources, and homies.">
+<Layout title="Collection" description="My resources and homies.">
     <section>
         <small>Select a category:</small>
         <section class="flex gap-5 flex-wrap justify-center">
@@ -31,7 +31,6 @@ const stamps = Object.values(stamp_folder).map(module => module.default);
             <label><input type="radio" name="category" value="dividers" checked> dividers</label>
             <label><input type="radio" name="category" value="gifs" checked> gif</label>
             <label><input type="radio" name="category" value="webrings" checked> webrings</label>
-            <label><input type="radio" name="category" value="other" checked> other</label>
         </section>
     </section>
     <section>
@@ -42,6 +41,7 @@ const stamps = Object.values(stamp_folder).map(module => module.default);
                 <a href="https://grossgirl94.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="https://grossgirl94.neocities.org/photos/grossgirl94%20button%20transparent.gif" alt=""></a>
                 <a href="https://sadgrl.online/" target="_blank" rel="noopener noreferrer"><img src="https://sadgrlonline.github.io/archived-sadgrl.online/assets/images/buttons/sadgrlonline.gif" alt=""></a>
                 <a href="https://hillhouse.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="https://hillhouse.neocities.org/_images/toybox/_buttons/users/hillhouse3.png" alt=""></a>
+                <a href="https://menmy.neocities.org/" target="_blank" rel="noopener noreferrer"><img src="https://menmy.neocities.org/assets/media/linkme/ghostgirl_mine.gif" alt=""></a>
             </div>
             {buttons.map((item) => (<Image src={item} alt="collection item" loading="lazy"/>))}
         </section>
@@ -88,10 +88,6 @@ const stamps = Object.values(stamp_folder).map(module => module.default);
                 <img usemap="#noailong" src="https://baccyflap.com/noai/longwidget.gif" alt="a long purple-and-blue star-spangled bar with purple-and-blue white-haloed letters in it that read THE NO AI WEBRING. the bar extends into two arrows pointing left and right, labeled PREV and NEXT, and there's a little button labeled RANDOM"> 
             </div>
         </section>
-        <!-- other -->
-        <section class="item" data-category="other">
-		    <a href="https://www.mabsland.com/Adoption.html"><img src="http://www.mabsland.com/Pandas/Censor_NC17a.gif" alt="" class="m-auto"></a>
-        </section>   
     </section>
     <script>
         const radioButtons = document.querySelectorAll('input[name="category"]');

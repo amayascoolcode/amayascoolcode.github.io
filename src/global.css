@@ -31,10 +31,13 @@ html {
     background-image: url("../src/assets/img/header.jpg");
 }
 body {
-    @apply text-base font-sans bg-bg text-fg text-center leading-7;
+    @apply text-base font-sans bg-bg text-fg text-center;
 }
-header, aside, nav, main, footer, section, div {
-    @apply p-2;
+header, aside, nav, main, footer{
+    @apply p-3;
+}
+section, div {
+    @apply p-1;
 }
 h1 {
     @apply text-7xl mb-6 font-display tracking-widest;
