@@ -30,8 +30,8 @@ const stamps = Object.values(stamp_folder).map(module => module.default);
             <label><input type="radio" name="category" value="stamps" checked> stamps</label>
             <label><input type="radio" name="category" value="dividers" checked> dividers</label>
             <label><input type="radio" name="category" value="gifs" checked> gif</label>
+            <label><input type="radio" name="category" value="badges" checked> badges</label>
             <label><input type="radio" name="category" value="webrings" checked> webrings</label>
-            <label><input type="radio" name="category" value="other" checked> other</label>
         </section>
     </section>
     <section>
@@ -61,7 +61,11 @@ const stamps = Object.values(stamp_folder).map(module => module.default);
         <!-- gifs -->
         <section class="item" data-category="gifs">
             {gifs.map((item) => (<Image src={item} alt="collection item" loading="lazy"/>))}
-        </section>   
+        </section>
+        <!-- badges -->
+        <section class="item" data-category="badges">
+            <a href="https://www.mabsland.com/Adoption.html" target="_blank" rel="noopener noreferrer"><img src="https://www.mabsland.com/Pandas/Censor_NC17a.gif" alt=""></a>
+        </section>  
         <!-- webrings -->
         <section class="item" data-category="webrings">
             <div id="selfinsertwebring">
@@ -89,10 +93,6 @@ const stamps = Object.values(stamp_folder).map(module => module.default);
                 <img usemap="#noailong" src="https://baccyflap.com/noai/longwidget.gif" alt="a long purple-and-blue star-spangled bar with purple-and-blue white-haloed letters in it that read THE NO AI WEBRING. the bar extends into two arrows pointing left and right, labeled PREV and NEXT, and there's a little button labeled RANDOM"> 
             </div>
             <div id="wwbtn"><a href="https://webmasterwebring.netlify.app"><img src="https://file.garden/ZrZSgsrYfQXsO7QH/ww/50x50.png"></a><br><a href="https://webmasterwebring.netlify.app?YOURSLUG-previous">prev</a> <a href="https://webmasterwebring.netlify.app?YOURSLUG-random">?</a> <a href="https://webmasterwebring.netlify.app?mortalmutt-next">next</a>
-        </section>
-        <!-- other -->
-        <section class="item" data-category="other">
-		    <a href="https://www.mabsland.com/Adoption.html"><img src="http://www.mabsland.com/Pandas/Censor_NC17a.gif" alt="" class="m-auto"></a>
         </section>
     </section>
     <script>
